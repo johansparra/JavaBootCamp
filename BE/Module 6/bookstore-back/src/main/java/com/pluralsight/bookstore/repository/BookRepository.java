@@ -1,4 +1,4 @@
-package repository;
+package com.pluralsight.bookstore.repository;
 
 import com.pluralsight.bookstore.model.Book;
 
