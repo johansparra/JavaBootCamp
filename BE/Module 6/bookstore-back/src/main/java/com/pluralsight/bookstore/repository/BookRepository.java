@@ -13,12 +13,14 @@ import static javax.transaction.Transactional.TxType.SUPPORTS;
 
 @Transactional(SUPPORTS)
 public class BookRepository {
+
     @PersistenceContext(unitName = "bookStorePU")
     private EntityManager em;
 
     public Book find(Long id){
-       return em.find(Book.class, id);
+        return em.find(Book.class, id);
     }
+
     @Transactional(REQUIRED)
     public Book create(Book book){
         em.persist(book);
@@ -31,7 +33,7 @@ public class BookRepository {
     }
 
     public List<Book> findAll(){
-       TypedQuery<Book> query= em.createQuery("SELECT b from Book b order by b.tittle",Book.class);
+       TypedQuery<Book> query= em.createQuery("SELECT b from Book b order by b.title",Book.class);
       return query.getResultList();
     }
 

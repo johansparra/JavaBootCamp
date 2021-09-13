@@ -11,7 +11,7 @@ public class Book {
     private Long id;
 
     @Column(length = 200)
-    private String tittle;
+    private String title;
 
     @Column(length = 1000)
     private String description;
@@ -26,11 +26,27 @@ public class Book {
     private Date publicationDate;
 
     @Column(name = "nb_of_pages")
-    private Integer nobOfPages;
+    private Integer nbOfPages;
 
     @Column(name = "image_url")
     private String imageURL;
     private Language language;
+
+
+    public Book() {
+    }
+
+    public Book(String isbn, String title, Float unitCost, Integer nbOfPages, Language language, Date publicationDate, String imageURL, String description) {
+        this.isbn = isbn;
+        this.title = title;
+        this.unitCost = unitCost;
+        this.nbOfPages = nbOfPages;
+        this.language = language;
+        this.publicationDate = publicationDate;
+        this.imageURL = imageURL;
+        this.description = description;
+    }
+
 
     public Long getId() {
         return id;
@@ -41,11 +57,11 @@ public class Book {
     }
 
     public String getTittle() {
-        return tittle;
+        return title;
     }
 
     public void setTittle(String tittle) {
-        this.tittle = tittle;
+        this.title = tittle;
     }
 
     public String getDescription() {
@@ -81,11 +97,11 @@ public class Book {
     }
 
     public Integer getNobOfPages() {
-        return nobOfPages;
+        return nbOfPages;
     }
 
     public void setNobOfPages(Integer nobOfPages) {
-        this.nobOfPages = nobOfPages;
+        this.nbOfPages = nobOfPages;
     }
 
     public String getImageURL() {
@@ -108,12 +124,12 @@ public class Book {
     public String toString() {
         return "Book{" +
                 "id=" + id +
-                ", tittle='" + tittle + '\'' +
+                ", tittle='" + title + '\'' +
                 ", description='" + description + '\'' +
                 ", unitCost=" + unitCost +
                 ", isbn='" + isbn + '\'' +
                 ", publicationDate=" + publicationDate +
-                ", nobOfPages=" + nobOfPages +
+                ", nobOfPages=" + nbOfPages +
                 ", imageURL='" + imageURL + '\'' +
                 ", language=" + language +
                 '}';
