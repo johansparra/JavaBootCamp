@@ -24,7 +24,7 @@ public class Book {
 
     @Column(name = "unit_cost")
     @Size(min = 1)
-    private Float unitCost;
+    private Integer unitCost;
 
     @Column(length = 50)
     @NotNull
@@ -49,7 +49,7 @@ public class Book {
     public Book() {
     }
 
-    public Book(String isbn, String title, Float unitCost, Integer nbOfPages, Language language, Date publicationDate, String imageURL, String description) {
+    public Book(String isbn, String title, Integer unitCost, Integer nbOfPages, Language language, Date publicationDate, String imageURL, String description) {
         this.isbn = isbn;
         this.title = title;
         this.unitCost = unitCost;
@@ -85,11 +85,11 @@ public class Book {
         this.description = description;
     }
 
-    public Float getUnitCost() {
+    public Integer getUnitCost() {
         return unitCost;
     }
 
-    public void setUnitCost(Float unitCost) {
+    public void setUnitCost(Integer unitCost) {
         this.unitCost = unitCost;
     }
 
