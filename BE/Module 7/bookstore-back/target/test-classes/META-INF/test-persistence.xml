@@ -12,5 +12,4 @@
             <property name="javax.persistence.schema-generation.scripts.drop-target" value="bookStoreDrop.ddl"/>
         </properties>
     </persistence-unit>
-    <persistence-unit name="persistenceUnit"/>
 </persistence>

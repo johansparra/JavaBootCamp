@@ -107,6 +107,13 @@
             <artifactId>maven-surefire-plugin</artifactId>
             <version>3.0.0-M5</version>
         </dependency>
+        <dependency>
+            <groupId>org.jboss.logmanager</groupId>
+            <artifactId>jboss-logmanager</artifactId>
+            <version>2.3.0.Alpha1</version>
+            <scope>test</scope>
+        </dependency>
+
     </dependencies>
 
     <build>
@@ -156,6 +163,21 @@
                     </execution>
                 </executions>
             </plugin>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-failsafe-plugin</artifactId>
+                <version>3.0.0-M5</version>
+                <configuration>
+                    <systemProperties>
+                        <property>
+                            <name>java.util.logging.manager</name>
+                            <value>org.jboss.logmanager.LogManager</value>
+                        </property>
+                    </systemProperties>
+                </configuration>
+            </plugin>
+
         </plugins>
     </build>
 

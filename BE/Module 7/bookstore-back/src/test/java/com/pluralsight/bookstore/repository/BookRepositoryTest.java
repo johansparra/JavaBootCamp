@@ -2,7 +2,6 @@ package com.pluralsight.bookstore.repository;
 
 import com.pluralsight.bookstore.model.Book;
 import com.pluralsight.bookstore.model.Language;
-import com.pluralsight.bookstore.repository.BookRepository;
 import org.jboss.arquillian.container.test.api.Deployment;
 import org.jboss.arquillian.junit.Arquillian;
 import org.jboss.arquillian.junit.InSequence;
@@ -18,9 +17,9 @@ import java.util.Date;
 
 import static org.junit.Assert.*;
 
-
 @RunWith(Arquillian.class)
 public class BookRepositoryTest {
+
     private static Long bookId;
 
     @Inject
@@ -30,19 +29,21 @@ public class BookRepositoryTest {
     public static Archive<?> createDeploymentPackage() {
 
         return ShrinkWrap.create(JavaArchive.class)
-            .addClass(Book.class)
-            .addClass(Language.class)
-            .addClass(BookRepository.class)
-            .addAsManifestResource(EmptyAsset.INSTANCE, "beans.xml")
-            .addAsManifestResource("META-INF/test-persistence.xml", "persistence.xml");
+                .addClass(Book.class)
+                .addClass(Language.class)
+                .addClass(BookRepository.class)
+                .addAsManifestResource(EmptyAsset.INSTANCE, "beans.xml")
+                .addAsManifestResource("META-INF/test-persistence.xml", "persistence.xml");
     }
+
+
 
     @Test
     @InSequence(1)
     public void shouldBeDeployed() {
         assertNotNull(bookRepository);
     }
-/*
+
     @Test
     @InSequence(2)
     public void shouldGetNoBook() {
@@ -52,7 +53,8 @@ public class BookRepositoryTest {
         assertEquals(0, bookRepository.findAll().size());
     }
 
-    @Test
+
+ /*   @Test
     @InSequence(3)
     public void shouldCreateABook() {
         // Creates a book
@@ -62,9 +64,9 @@ public class BookRepositoryTest {
         assertNotNull(book);
         assertNotNull(book.getId());
         bookId = book.getId();
-    }
+    }*/
 
-    @Test
+  /*  @Test
     @InSequence(4)
     public void shouldFindTheCreatedBook() {
         // Finds the book
@@ -72,18 +74,18 @@ public class BookRepositoryTest {
         // Checks the found book
         assertNotNull(bookFound.getId());
         assertEquals("title", bookFound.getTitle());
-    }
+    }*/
 
-    @Test
+/*    @Test
     @InSequence(5)
     public void shouldGetOneBook() {
         // Count all
         assertEquals(Long.valueOf(1), bookRepository.countAll());
         // Find all
         assertEquals(1, bookRepository.findAll().size());
-    }
+    }*/
 
-    @Test
+ /*   @Test
     @InSequence(6)
     public void shouldDeleteTheCreatedBook() {
         // Deletes the book
@@ -91,7 +93,7 @@ public class BookRepositoryTest {
         // Checks the deleted book
         Book bookDeleted = bookRepository.find(bookId);
         assertNull(bookDeleted);
-    }
+    }*/
 
     @Test
     @InSequence(7)
@@ -100,7 +102,53 @@ public class BookRepositoryTest {
         assertEquals(Long.valueOf(0), bookRepository.countAll());
         // Find all
         assertEquals(0, bookRepository.findAll().size());
-    }*/
+    }
+
+    @Test(expected = Exception.class)
+    @InSequence(10)
+    public void shouldFailCreatingANullBook() {
+        bookRepository.create(null);
+    }
+
+    @Test(expected = Exception.class)
+    @InSequence(11)
+    public void shouldFailCreatingABookWithNullTitle() {
+        bookRepository.create(new Book("isbn", null, 12F, 123, Language.ENGLISH, new Date(), "imageURL", "description"));
+    }
+
+    @Test(expected = Exception.class)
+    @InSequence(12)
+    public void shouldFailCreatingABookWithLowUnitCostTitle() {
+        bookRepository.create(new Book("isbn", "title", 0F, 123, Language.ENGLISH, new Date(), "imageURL", "description"));
+    }
+
+    @Test(expected = Exception.class)
+    @InSequence(13)
+    public void shouldFailCreatingABookWithNullISBN() {
+        bookRepository.create(new Book(null, "title", 12F, 123, Language.ENGLISH, new Date(), "imageURL", "description"));
+    }
+
+    @Test(expected = Exception.class)
+    @InSequence(14)
+    public void shouldFailInvokingFindByIdWithNull() {
+        bookRepository.find(null);
+    }
+
+    @Test
+    @InSequence(15)
+    public void shouldNotFindUnknownId() {
+        assertNull(bookRepository.find(99999L));
+    }
+
+    @Test(expected = Exception.class)
+    @InSequence(16)
+    public void shouldFailInvokingDeleteByIdWithNull() {
+        bookRepository.delete(null);
+    }
+    @Test(expected = Exception.class)
+    @InSequence(17)
+    public void shouldNotDeleteUnknownId() {
+        bookRepository.delete(99999L);
+    }
+
 }
-
-

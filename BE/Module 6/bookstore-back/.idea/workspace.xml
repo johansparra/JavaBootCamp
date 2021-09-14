@@ -9,31 +9,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c1e9b511-73ff-42ca-88d6-3c1b0312439f" name="Changes" comment="Modulo 7 - Bootstrap Java EE">
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__Arquillian_TestNG_1_7_0_Alpha10.xml" beforeDir="false" />
+    <list default="true" id="c1e9b511-73ff-42ca-88d6-3c1b0312439f" name="Changes" comment="Modulo 7 - Bootstrap Java EE no sirve">
+      <change afterPath="$PROJECT_DIR$/.idea/META-INF/orm.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/pluralsight/bookstore/model/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pluralsight/bookstore/model/Book.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/pluralsight/bookstore/repository/BookRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pluralsight/bookstore/repository/BookRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/bookstore-back-1.0.war" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/bookstore-back-1.0/WEB-INF/classes/META-INF/persistence.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/bookstore-back-1.0/WEB-INF/classes/com/pluralsight/bookstore/model/Book.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/bookstore-back-1.0/WEB-INF/classes/com/pluralsight/bookstore/model/Language.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/bookstore-back-1.0/WEB-INF/lib/arquillian-container-test-api-1.1.13.Final.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/bookstore-back-1.0/WEB-INF/lib/arquillian-core-api-1.1.13.Final.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/bookstore-back-1.0/WEB-INF/lib/arquillian-core-spi-1.1.13.Final.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/bookstore-back-1.0/WEB-INF/lib/arquillian-junit-core-1.1.13.Final.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/bookstore-back-1.0/WEB-INF/lib/arquillian-test-api-1.1.13.Final.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/bookstore-back-1.0/WEB-INF/lib/arquillian-test-spi-1.1.13.Final.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/bookstore-back-1.0/WEB-INF/lib/hamcrest-core-1.3.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/bookstore-back-1.0/WEB-INF/lib/junit-4.13.2.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/bookstore-back-1.0/WEB-INF/lib/shrinkwrap-api-1.2.6.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/bookstore-back-1.0/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/pluralsight/bookstore/model/Book.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/pluralsight/bookstore/model/Book.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/pluralsight/bookstore/repository/BookRepositoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/pluralsight/bookstore/repository/BookRepositoryTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/META-INF/test-persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/META-INF/test-persistence.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,18 +57,19 @@
     <property name="Repository.Attach.Sources" value="false" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="Arquillian JUnit4" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.Arquillian JUnit4" value="" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.Arquillian TestNG" value="org.jboss.arquillian.testng.Arquillian" />
     <property name="create.test.in.the.same.root" value="true" />
     <property name="full.screen.before.presentation.mode" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Module 7/bookstore-back" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.3604194" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
@@ -100,7 +84,7 @@
       <recent name="repository" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.Test">
+  <component name="RunManager" selected="Arquillian JUnit.BookRepositoryTest">
     <configuration name="BookRepositoryTest" type="ArquillianJUnit" factoryName="" temporary="true" nameIsGenerated="true">
       <module name="bookstore-back" />
       <shortenClasspath name="NONE" />
@@ -158,7 +142,6 @@
       <method v="2" />
     </configuration>
     <configuration name="JBoss Local" type="JBossConfiguration" factoryName="Local" APPLICATION_SERVER_NAME="JBoss/WildFly 24.0.1.Final" ALTERNATIVE_JRE_ENABLED="false">
-      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/bookstore-back-1.0/" />
       <option name="BROWSER_ID" value="a7bb68e0-33c0-4d6f-a81a-aac1fdb870c8" />
       <option name="UPDATING_POLICY" value="redeploy-artifacts" />
       <deployment>
@@ -322,7 +305,7 @@
       <workItem from="1631507724050" duration="7970000" />
       <workItem from="1631516070003" duration="925000" />
       <workItem from="1631548259443" duration="5488000" />
-      <workItem from="1631560766914" duration="1978000" />
+      <workItem from="1631560766914" duration="8319000" />
     </task>
     <task id="LOCAL-00001" summary="Modulo 4 - Bootstrap Java EE">
       <created>1631494310662</created>
@@ -373,7 +356,21 @@
       <option name="project" value="LOCAL" />
       <updated>1631510031544</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Modulo 7 - Bootstrap Java EE no sirve">
+      <created>1631563329898</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1631563329898</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Modulo 7 - Bootstrap Java EE no sirve">
+      <created>1631563407758</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1631563407758</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -400,7 +397,8 @@
     <MESSAGE value="Modulo 4 - Bootstrap Java EE" />
     <MESSAGE value="Modulo 6 - Bootstrap Java EE" />
     <MESSAGE value="Modulo 7 - Bootstrap Java EE" />
-    <option name="LAST_COMMIT_MESSAGE" value="Modulo 7 - Bootstrap Java EE" />
+    <MESSAGE value="Modulo 7 - Bootstrap Java EE no sirve" />
+    <option name="LAST_COMMIT_MESSAGE" value="Modulo 7 - Bootstrap Java EE no sirve" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
