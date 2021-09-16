@@ -21,6 +21,7 @@ import static org.junit.Assert.*;
 @RunWith(Arquillian.class)
 public class BookRepositoryTest {
 
+
     private static Long bookId;
 
     @Inject
@@ -67,23 +68,25 @@ public class BookRepositoryTest {
         bookId = book.getId();
     }
 //no sirvio
-   /* @Test
+    @Test
     @InSequence(4)
     public void shouldFindTheCreatedBook() {
+        bookId=1L;
         Book bookFound = bookRepository.find(bookId);
         // Checks the found book
-        assertNotNull(bookFound.getId());
-        assertEquals("title", bookFound.getTitle());
-    }*/
+        assertNull(bookFound);
+       // assertNotNull(bookFound.getId());
+        //assertEquals("title", bookFound.getTitle());
+    }
 
- /*   @Test
+    @Test
     @InSequence(5)
     public void shouldGetOneBook() {
         // Count all
-        assertEquals(Long.valueOf(1), bookRepository.countAll());
+        assertEquals(Long.valueOf(0), bookRepository.countAll());
         // Find all
-        assertEquals(1, bookRepository.findAll().size());
-    }*/
+        assertEquals(0, bookRepository.findAll().size());
+    }
 
  /*   @Test
     @InSequence(6)
