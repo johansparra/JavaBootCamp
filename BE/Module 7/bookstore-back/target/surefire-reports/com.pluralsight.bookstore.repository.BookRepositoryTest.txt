@@ -1,4 +1,12 @@
 -------------------------------------------------------------------------------
 Test set: com.pluralsight.bookstore.repository.BookRepositoryTest
 -------------------------------------------------------------------------------
-Tests run: 14, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.51 s - in com.pluralsight.bookstore.repository.BookRepositoryTest
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 2.27 s <<< FAILURE! - in com.pluralsight.bookstore.repository.BookRepositoryTest
+com.pluralsight.bookstore.repository.BookRepositoryTest  Time elapsed: 2.27 s  <<< ERROR!
+org.jboss.arquillian.container.spi.client.container.DeploymentException: 
+Cannot deploy test.war: {"WFLYCTL0062: Composite operation failed and was rolled back. Steps that failed:" => {"Operation step-1" => {"WFLYCTL0080: Failed services" => {"jboss.deployment.unit.\"test.war\".WeldStartService" => "Failed to start service
+    Caused by: org.jboss.weld.exceptions.DeploymentException: WELD-001408: Unsatisfied dependencies for type NumberGenerator with qualifiers @Default
+  at injection point [BackedAnnotatedField] @Inject private com.pluralsight.bookstore.repository.BookRepository.generator
+  at com.pluralsight.bookstore.repository.BookRepository.generator(BookRepository.java:0)
+"}}}}
+
